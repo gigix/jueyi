@@ -20,21 +20,9 @@ public class Yao {
 
     @Override
     public String toString() {
-        String result;
-        if(isYang()) {
-            result = "⚊ ";
-            if(isChange()) {
-                result += "o️ 老阳";
-            } else {
-                result += "· 少阳";
-            }
-        } else {
-            result = "⚋ ";
-            if(isChange()) {
-                result += "× 老阴";
-            } else {
-                result += ":: 少阴";
-            }
+        String result = isYang() ? "⚊" : "⚋";
+        if(isChange()) {
+            result += isYang()? "o" : "×";
         }
         return result;
     }

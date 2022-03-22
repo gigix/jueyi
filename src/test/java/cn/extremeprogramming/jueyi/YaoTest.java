@@ -26,9 +26,9 @@ public class YaoTest {
     
     @Test
     public void should_have_text_representation() {
-        assertThat(SHAO_YANG.toString(), is("⚊ · 少阳"));
-        assertThat(SHAO_YIN.toString(), is("⚋ :: 少阴"));
-        assertThat(LAO_YANG.toString(), is("⚊ o️ 老阳"));
-        assertThat(LAO_YIN.toString(), is("⚋ × 老阴"));
+        assertThat(SHAO_YANG.toString(), is("⚊"));
+        assertThat(SHAO_YIN.toString(), is("⚋"));
+        assertThat(LAO_YANG.toString(), is("⚊o"));
+        assertThat(LAO_YIN.toString(), is("⚋×"));
     }
 }
