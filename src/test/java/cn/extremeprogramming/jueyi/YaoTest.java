@@ -29,6 +29,6 @@ public class YaoTest {
         assertThat(SHAO_YANG.toString(), is("⚊ · 少阳"));
         assertThat(SHAO_YIN.toString(), is("⚋ :: 少阴"));
         assertThat(LAO_YANG.toString(), is("⚊ o️ 老阳"));
-        assertThat(LAO_YIN.toString(), is("⚋ × 老阴 "));
+        assertThat(LAO_YIN.toString(), is("⚋ × 老阴"));
     }
 }
