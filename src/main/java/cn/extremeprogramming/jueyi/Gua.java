@@ -1,5 +1,9 @@
 package cn.extremeprogramming.jueyi;
 
+import javax.swing.text.ChangedCharSetException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import static cn.extremeprogramming.jueyi.Yi.YANG;
@@ -14,6 +18,7 @@ public class Gua {
     public final String name;
     public final String representation;
 
+    private List<Yao> sixYao;
     private final List<Yi> lines;
 
     private Gua(int index, String name, String representation, Integer... sides) {
@@ -23,8 +28,10 @@ public class Gua {
         this.lines = stream(sides).map(i -> i == 1 ? YANG : YIN).collect(toList());
     }
 
-    public static Gua from(Yao... yaosArray) {
-        return ALL_64_GUA.stream().filter(gua -> gua.matches(asList(yaosArray))).findFirst().get();
+    public static Gua from(Yao... allYao) {
+        Gua gua = ALL_64_GUA.stream().filter(g -> g.matches(asList(allYao))).findFirst().get();
+        gua.sixYao = asList(allYao);
+        return gua;
     }
 
     private boolean matches(List<Yao> yaos) {
@@ -102,6 +109,12 @@ public class Gua {
 
     @Override
     public String toString() {
-        return format("%d. %s\t%s", index, name, representation);
+        return format("%s\n%d. %s\t%s", sixYao.toString(), index, name, representation);
+    }
+
+    public List<Change> changes() {
+        return sixYao.stream()
+                .filter(Yao::isChange)
+                .map(yao -> new Change(sixYao.indexOf(yao) + 1, yao)).collect(toList());
     }
 }

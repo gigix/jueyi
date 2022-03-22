@@ -15,7 +15,6 @@ public class DivinationTest {
         assertThat(sixYao.size(), is(6));
 
         Gua gua = divination.gua();
-        System.out.println(sixYao);
         System.out.println(gua);
     }
 }
