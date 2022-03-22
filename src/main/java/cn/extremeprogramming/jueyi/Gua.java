@@ -1,9 +1,5 @@
 package cn.extremeprogramming.jueyi;
 
-import javax.swing.text.ChangedCharSetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import static cn.extremeprogramming.jueyi.Yi.YANG;
@@ -116,5 +112,14 @@ public class Gua {
         return sixYao.stream()
                 .filter(Yao::isChange)
                 .map(yao -> new Change(sixYao.indexOf(yao) + 1, yao)).collect(toList());
+    }
+
+    public int effectiveYaoPosition() {
+        switch (changes().size()) {
+            case 1:
+                return changes().get(0).position;
+            default:
+                return 0;
+        }
     }
 }

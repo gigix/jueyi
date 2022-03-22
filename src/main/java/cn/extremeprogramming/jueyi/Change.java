@@ -1,11 +1,11 @@
 package cn.extremeprogramming.jueyi;
 
 public class Change {
-    public final int index;
+    public final int position;
     public final Yao yao;
 
-    public Change(int index, Yao yao) {
-        this.index = index;
+    public Change(int position, Yao yao) {
+        this.position = position;
         this.yao = yao;
     }
 }

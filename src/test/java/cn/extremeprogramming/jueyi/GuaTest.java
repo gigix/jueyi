@@ -24,10 +24,21 @@ public class GuaTest {
     }
 
     @Test
-    public void should_know_change() {
+    public void should_know_change_yao() {
         Gua guimei = from(SHAO_YANG, SHAO_YANG, SHAO_YIN, LAO_YANG, SHAO_YIN, SHAO_YIN);
         assertThat(guimei.changes().size(), is(1));
-        assertThat(guimei.changes().get(0).index, is(4));
+        assertThat(guimei.changes().get(0).position, is(4));
         assertThat(guimei.changes().get(0).yao, is(LAO_YANG));
+    }
+
+    @Test
+    public void should_know_effective_yao() {
+        Gua qian = from(SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG);
+        assertThat(qian.effectiveYaoPosition(), is(0));
+
+        Gua guimei = from(SHAO_YANG, SHAO_YANG, SHAO_YIN, LAO_YANG, SHAO_YIN, SHAO_YIN);
+        assertThat(guimei.effectiveYaoPosition(), is(4));
+
+        // TODO: finish other variations here
     }
 }
