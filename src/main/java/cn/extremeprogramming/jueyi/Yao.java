@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Yao {
     private final List<Yi> yis;
+    private int position;
 
     public Yao(Yi... yis) {
         this.yis = Arrays.asList(yis);
@@ -25,5 +26,17 @@ public class Yao {
             result += isYang()? "o" : "×";
         }
         return result;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
+
+    public int position() {
+        return position;
+    }
+
+    public boolean isStable() {
+        return !isChange();
     }
 }
