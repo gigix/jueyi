@@ -1,24 +1,34 @@
 package cn.extremeprogramming.jueyi;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static cn.extremeprogramming.jueyi.Yi.YANG;
 import static cn.extremeprogramming.jueyi.Yi.YIN;
+import static java.lang.Integer.parseInt;
 import static java.lang.String.format;
+import static java.lang.String.valueOf;
 import static java.util.Arrays.asList;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.toList;
 
 public class Gua {
-    public final int index;
+    public final int position;
     public final String name;
     public final String representation;
 
     private List<Yao> sixYao;
     private final List<Yi> lines;
 
-    private Gua(int index, String name, String representation, Integer... sides) {
-        this.index = index;
+    private Gua(int position, String name, String representation, Integer... sides) {
+        this.position = position;
         this.name = name;
         this.representation = representation;
         this.lines = stream(sides).map(i -> i == 1 ? YANG : YIN).collect(toList());
@@ -105,7 +115,7 @@ public class Gua {
 
     @Override
     public String toString() {
-        return format("%s\n%d. %s\t%s", sixYao.toString(), index, name, representation);
+        return format("%s\n%d. %s\t%s", sixYao.toString(), position, name, representation);
     }
 
     public List<Change> changes() {
@@ -121,5 +131,15 @@ public class Gua {
             default:
                 return 0;
         }
+    }
+
+    public String effectiveDeducible() throws IOException, ParseException {
+        JSONArray allGua = (JSONArray) new JSONParser().parse(new InputStreamReader(
+                Gua.class.getClassLoader().getResourceAsStream("64gua.json")));
+        JSONObject gua = (JSONObject) allGua.stream().filter(
+                obj -> parseInt(((JSONObject) obj).get("position").toString()) == this.position)
+                .findFirst().get();
+        JSONArray deducibles = (JSONArray) gua.get("deducibles");
+        return valueOf(deducibles.get(effectiveYaoPosition()));
     }
 }

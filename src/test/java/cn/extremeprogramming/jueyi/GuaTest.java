@@ -1,6 +1,9 @@
 package cn.extremeprogramming.jueyi;
 
+import org.json.simple.parser.ParseException;
 import org.junit.Test;
+
+import java.io.IOException;
 
 import static cn.extremeprogramming.jueyi.Fixture.*;
 import static cn.extremeprogramming.jueyi.Gua.ALL_64_GUA;
@@ -12,10 +15,10 @@ public class GuaTest {
     @Test
     public void should_create_from_6_yao() {
         Gua qian = from(SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG);
-        assertThat(qian.index, is(1));
+        assertThat(qian.position, is(1));
 
         Gua kun = from(SHAO_YIN, SHAO_YIN, SHAO_YIN, SHAO_YIN, SHAO_YIN, SHAO_YIN);
-        assertThat(kun.index, is(2));
+        assertThat(kun.position, is(2));
     }
 
     @Test
@@ -32,13 +35,13 @@ public class GuaTest {
     }
 
     @Test
-    public void should_know_effective_yao() {
+    public void should_know_effective_yao() throws Exception {
         Gua qian = from(SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG);
         assertThat(qian.effectiveYaoPosition(), is(0));
 
-        Gua guimei = from(SHAO_YANG, SHAO_YANG, SHAO_YIN, LAO_YANG, SHAO_YIN, SHAO_YIN);
-        assertThat(guimei.effectiveYaoPosition(), is(4));
-
+        Gua qian1 = from(LAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YANG);
+        assertThat(qian1.effectiveYaoPosition(), is(1));
+        assertThat(qian1.effectiveDeducible(), is("初九：潜龙勿用。"));
         // TODO: finish other variations here
     }
 }

@@ -1,0 +1,521 @@
+[
+  {
+    "position": "01",
+    "name": "乾　",
+    "symbol": "䷀",
+    "deducibles": [
+      "元亨。利贞。",
+      "初九：潜龙勿用。",
+      "九二：见龙在田，利见大人。",
+      "九三：君子终日乾乾，夕惕若；厉，无咎。",
+      "九四：或跃在渊，无咎。",
+      "九五：飞龙在天，利见大人。",
+      "上九：亢龙，有悔。",
+      "用九：见群龙无首，吉。"
+    ]
+  },
+  {
+    "position": "02",
+    "name": "坤　",
+    "symbol": "䷁",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "03",
+    "name": "屯　",
+    "symbol": "䷂",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "04",
+    "name": "蒙　",
+    "symbol": "䷃",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "05",
+    "name": "需　",
+    "symbol": "䷄",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "06",
+    "name": "讼　",
+    "symbol": "䷅",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "07",
+    "name": "师　",
+    "symbol": "䷆",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "08",
+    "name": "比　",
+    "symbol": "䷇",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "09",
+    "name": "小畜",
+    "symbol": "䷈",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "10",
+    "name": "履　",
+    "symbol": "䷉",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "11",
+    "name": "泰　",
+    "symbol": "䷊",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "12",
+    "name": "否　",
+    "symbol": "䷋",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "13",
+    "name": "同人",
+    "symbol": "䷌",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "14",
+    "name": "大有",
+    "symbol": "䷍",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "15",
+    "name": "谦　",
+    "symbol": "䷎",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "16",
+    "name": "豫　",
+    "symbol": "䷏",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "17",
+    "name": "随　",
+    "symbol": "䷐",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "18",
+    "name": "蛊　",
+    "symbol": "䷑",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "19",
+    "name": "临　",
+    "symbol": "䷒",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "20",
+    "name": "观　",
+    "symbol": "䷓",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "21",
+    "name": "噬嗑",
+    "symbol": "䷔",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "22",
+    "name": "贲　",
+    "symbol": "䷕",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "23",
+    "name": "剥　",
+    "symbol": "䷖",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "24",
+    "name": "复　",
+    "symbol": "䷗",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "25",
+    "name": "无妄",
+    "symbol": "䷘",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "26",
+    "name": "大畜",
+    "symbol": "䷙",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "27",
+    "name": "颐　",
+    "symbol": "䷚",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "28",
+    "name": "大过",
+    "symbol": "䷛",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "29",
+    "name": "坎　",
+    "symbol": "䷜",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "30",
+    "name": "离　",
+    "symbol": "䷝",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "31",
+    "name": "咸　",
+    "symbol": "䷞",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "32",
+    "name": "恒　",
+    "symbol": "䷟",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "33",
+    "name": "遁　",
+    "symbol": "䷠",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "34",
+    "name": "大壮",
+    "symbol": "䷡",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "35",
+    "name": "晋　",
+    "symbol": "䷢",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "36",
+    "name": "明夷",
+    "symbol": "䷣",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "37",
+    "name": "家人",
+    "symbol": "䷤",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "38",
+    "name": "睽　",
+    "symbol": "䷥",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "39",
+    "name": "蹇　",
+    "symbol": "䷦",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "40",
+    "name": "解　",
+    "symbol": "䷧",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "41",
+    "name": "损　",
+    "symbol": "䷨",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "42",
+    "name": "益　",
+    "symbol": "䷩",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "43",
+    "name": "夬　",
+    "symbol": "䷪",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "44",
+    "name": "姤　",
+    "symbol": "䷫",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "45",
+    "name": "萃　",
+    "symbol": "䷬",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "46",
+    "name": "升　",
+    "symbol": "䷭",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "47",
+    "name": "困　",
+    "symbol": "䷮",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "48",
+    "name": "井　",
+    "symbol": "䷯",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "49",
+    "name": "革　",
+    "symbol": "䷰",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "50",
+    "name": "鼎　",
+    "symbol": "䷱",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "51",
+    "name": "震　",
+    "symbol": "䷲",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "52",
+    "name": "艮　",
+    "symbol": "䷳",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "53",
+    "name": "渐　",
+    "symbol": "䷴",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "54",
+    "name": "归妹",
+    "symbol": "䷵",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "55",
+    "name": "丰　",
+    "symbol": "䷶",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "56",
+    "name": "旅　",
+    "symbol": "䷷",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "57",
+    "name": "巽　",
+    "symbol": "䷸",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "58",
+    "name": "兑　",
+    "symbol": "䷹",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "59",
+    "name": "涣　",
+    "symbol": "䷺",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "60",
+    "name": "节　",
+    "symbol": "䷻",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "61",
+    "name": "中孚",
+    "symbol": "䷼",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "62",
+    "name": "小过",
+    "symbol": "䷽",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "63",
+    "name": "既济",
+    "symbol": "䷾",
+    "deducibles": [
+      ""
+    ]
+  },
+  {
+    "position": "64",
+    "name": "未济",
+    "symbol": "䷿",
+    "deducibles": [
+      ""
+    ]
+  }
+]
