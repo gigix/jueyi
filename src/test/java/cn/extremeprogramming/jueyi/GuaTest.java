@@ -24,7 +24,7 @@ public class GuaTest {
     @Test
     public void should_have_64_distinct_gua() {
         assertThat(ALL_64_GUA.stream().distinct().count(), is(64L));
-        assertThat(ALL_64_GUA.stream().map(g->g.lines).distinct().count(), is(64L));
+        assertThat(ALL_64_GUA.stream().map(g -> g.lines).distinct().count(), is(64L));
     }
 
     @Test
@@ -61,5 +61,21 @@ public class GuaTest {
 
         Gua guimei5 = from(LAO_YANG, LAO_YANG, LAO_YIN, LAO_YANG, SHAO_YIN, LAO_YIN);
         assertThat(guimei5.effectiveYaoPosition(), is(5));
+    }
+
+    @Test
+    public void should_deal_with_6_change_yao() {
+        Gua qian = from(LAO_YANG, LAO_YANG, LAO_YANG, LAO_YANG, LAO_YANG, LAO_YANG);
+        assertThat(qian.effectiveYaoPosition(), is(7));
+        assertThat(qian.effectiveDeducible(), is("用九：见群龙无首，吉。"));
+
+        Gua kun = from(LAO_YIN, LAO_YIN, LAO_YIN, LAO_YIN, LAO_YIN, LAO_YIN);
+        assertThat(kun.effectiveYaoPosition(), is(7));
+        assertThat(kun.effectiveDeducible(), is("用六：利永贞。"));
+
+        // ䷋ 否卦：否极泰来
+        Gua pi = from(LAO_YIN, LAO_YIN, LAO_YIN, LAO_YANG, LAO_YANG, LAO_YANG);
+        assertThat(pi.effectiveYaoPosition(), is(7));
+        assertThat(pi.effectiveDeducible(), is("小往大来，吉亨。"));
     }
 }

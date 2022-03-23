@@ -44,9 +44,13 @@ public class Gua {
 
     private List<Yao> sixYao;
 
-    public static Gua from(Yao... allYao) {
-        Gua gua = ALL_64_GUA.stream().filter(g -> g.matches(asList(allYao))).findFirst().get();
-        gua.sixYao = asList(allYao);
+    public static Gua from(Yao... sixYao) {
+        return from(asList(sixYao));
+    }
+
+    private static Gua from(List<Yao> sixYao) {
+        Gua gua = ALL_64_GUA.stream().filter(g -> g.matches(sixYao)).findFirst().get();
+        gua.sixYao = sixYao;
         gua.sixYao.forEach(yao -> yao.setPosition(gua.sixYao.indexOf(yao) + 1));
         return gua;
     }
@@ -89,14 +93,23 @@ public class Gua {
             case 4:
             case 5:
                 return stables().get(0).position();
-            case 6:
-                throw new UnsupportedOperationException("It's not implemented yet.");
+            case 6: {
+                return 7;
+            }
             default:
                 return 0;
         }
     }
 
     public String effectiveDeducible() {
+        if(effectiveYaoPosition() == 7 && position > 2) {
+            Gua changeGua = getChangeGua();
+            return changeGua.deducibles.get(0);
+        }
         return deducibles.get(effectiveYaoPosition());
+    }
+
+    private Gua getChangeGua() {
+        return from(sixYao.stream().map(Yao::reverse).collect(toList()));
     }
 }

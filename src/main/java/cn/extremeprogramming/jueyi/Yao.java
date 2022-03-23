@@ -3,6 +3,9 @@ package cn.extremeprogramming.jueyi;
 import java.util.Arrays;
 import java.util.List;
 
+import static cn.extremeprogramming.jueyi.Yi.YANG;
+import static cn.extremeprogramming.jueyi.Yi.YIN;
+
 public class Yao {
     private final List<Yi> yis;
     private int position;
@@ -22,8 +25,8 @@ public class Yao {
     @Override
     public String toString() {
         String result = isYang() ? "⚊" : "⚋";
-        if(isChange()) {
-            result += isYang()? "o" : "×";
+        if (isChange()) {
+            result += isYang() ? "o" : "×";
         }
         return result;
     }
@@ -38,5 +41,9 @@ public class Yao {
 
     public boolean isStable() {
         return !isChange();
+    }
+
+    public Yao reverse() {
+        return isYang() ? new Yao(YIN, YANG, YANG) : new Yao(YANG, YIN, YIN);
     }
 }
