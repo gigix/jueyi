@@ -3,8 +3,7 @@ package cn.extremeprogramming.jueyi;
 import org.junit.Test;
 
 import static cn.extremeprogramming.jueyi.Fixture.*;
-import static cn.extremeprogramming.jueyi.Gua.ALL_64_GUA;
-import static cn.extremeprogramming.jueyi.Gua.from;
+import static cn.extremeprogramming.jueyi.Gua.*;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -25,6 +24,7 @@ public class GuaTest {
     @Test
     public void should_have_64_distinct_gua() {
         assertThat(ALL_64_GUA.stream().distinct().count(), is(64L));
+        assertThat(ALL_64_GUA.stream().map(g->g.lines).distinct().count(), is(64L));
     }
 
     @Test
