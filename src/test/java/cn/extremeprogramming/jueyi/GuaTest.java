@@ -19,6 +19,11 @@ public class GuaTest {
         Gua guimei = from(SHAO_YANG, SHAO_YANG, SHAO_YIN, LAO_YANG, SHAO_YIN, SHAO_YIN);
         assertThat(guimei.name, is("归妹"));
         assertThat(guimei.position, is(54));
+
+        // ䷈ 09.小畜
+        Gua xiaochu = from(SHAO_YANG, SHAO_YANG, SHAO_YANG, SHAO_YIN, SHAO_YANG, SHAO_YANG);
+        assertThat(xiaochu.name, is("小畜"));
+        assertThat(xiaochu.position, is(9));
     }
 
     @Test
@@ -73,7 +78,7 @@ public class GuaTest {
         assertThat(kun.effectiveYaoPosition(), is(7));
         assertThat(kun.effectiveDeducible(), is("用六：利永贞。"));
 
-        // ䷋ 否卦：否极泰来
+        // ䷋ 否：否极泰来
         Gua pi = from(LAO_YIN, LAO_YIN, LAO_YIN, LAO_YANG, LAO_YANG, LAO_YANG);
         assertThat(pi.effectiveYaoPosition(), is(7));
         assertThat(pi.effectiveDeducible(), is("小往大来，吉亨。"));

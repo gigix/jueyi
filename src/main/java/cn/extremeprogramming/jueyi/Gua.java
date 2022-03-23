@@ -93,16 +93,15 @@ public class Gua {
             case 4:
             case 5:
                 return stables().get(0).position();
-            case 6: {
+            case 6:
                 return 7;
-            }
             default:
                 return 0;
         }
     }
 
     public String effectiveDeducible() {
-        if(effectiveYaoPosition() == 7 && position > 2) {
+        if (effectiveYaoPosition() == 7 && position > 2) {
             Gua changeGua = getChangeGua();
             return changeGua.deducibles.get(0);
         }
