@@ -6,6 +6,7 @@ import java.util.Random;
 import static cn.extremeprogramming.jueyi.Gua.from;
 import static cn.extremeprogramming.jueyi.Yi.YANG;
 import static cn.extremeprogramming.jueyi.Yi.YIN;
+import static java.lang.Math.abs;
 import static java.time.Instant.now;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.IntStream.range;
@@ -39,7 +40,7 @@ public class Divination {
     }
 
     private Yi flipACoin() {
-        return random.nextInt() % 2 == 1 ? YANG : YIN;
+        return abs(random.nextInt()) % 2 == 1 ? YANG : YIN;
     }
 
     private long seed() {
